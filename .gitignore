@@ -1,0 +1,11 @@
+# data and generated artefacts (too large / not ours to redistribute)
+dataset/
+output/*.tsv
+cache/
+*.parquet
+*.npz
+*.lgb
+__pycache__/
+.venv/
+.DS_Store
+__MACOSX/
