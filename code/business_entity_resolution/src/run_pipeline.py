@@ -38,11 +38,14 @@ def log(msg, t0=[time.time()]):
 
 def block(split):
     d = CACHE_DIR / f"cand_{split}"
-    if d.exists() and any(d.iterdir()):
+    if (d / "_DONE").exists():
         return
     d.mkdir(exist_ok=True)
+    for f in d.glob("*.parquet"):   # remove chunks of an interrupted run
+        f.unlink()
     s1, pool = load_split(split)
     generate(s1, pool, top_k=CFG["block_top_k"], cap=CFG["block_cap"], out_dir=d)
+    (d / "_DONE").write_text("ok")
     log(f"blocking {split} done")
 
 
@@ -120,6 +123,8 @@ if __name__ == "__main__":
     stage = sys.argv[1] if len(sys.argv) > 1 else "all"
     if stage in ("block", "all"):
         block("train"); block("test")
+    if stage == "block_test":
+        block("test")
     if stage in ("train", "all"):
         train()
     if stage in ("predict", "all"):
