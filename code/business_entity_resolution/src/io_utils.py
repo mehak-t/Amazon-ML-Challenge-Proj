@@ -7,8 +7,7 @@ COLS = ["entity_id", "business_name", "business_address", "country"]
 
 
 def read_tsv(path):
-    return pl.read_csv(path, separator="\t", quote_char=None, infer_schema=False,
-                       missing_utf8_is_empty_string=True, encoding="utf8")
+    return pl.read_csv(path, separator="\t", quote_char=None, infer_schema=False, encoding="utf8")
 
 
 def load_source(split, src):
