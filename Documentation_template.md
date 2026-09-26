@@ -1,23 +1,26 @@
 # ML Challenge 2026: Business Entity Resolution Solution Template
 
-**Team Name:** [Your Team Name]  
-**Team Members:** [List all team members]  
+**Team Name:** Developing Divas
+**Team Members:** Mehak Trivedi, Purva Pote
 **Submission Date:** [Date]
 
 ---
 
 ## 1. Executive Summary
-*Provide a brief 2-3 sentence overview of your approach and key innovations.*
+
+_Provide a brief 2-3 sentence overview of your approach and key innovations._
 
 ---
 
 ## 2. Methodology
 
 ### 2.1 Problem Analysis
-*Key insights discovered during EDA — noise patterns, address variations, missing fields, etc.*
+
+_Key insights discovered during EDA — noise patterns, address variations, missing fields, etc._
 
 ### 2.2 Solution Strategy
-*Outline your high-level approach.*
+
+_Outline your high-level approach._
 
 **Approach Type:** [Blocking + Classifier / End-to-End / Graph-Based / Hybrid, etc]  
 **Core Innovation:** [Brief description of your main technical contribution]
@@ -25,7 +28,8 @@
 ---
 
 ## 3. Candidate Generation (Blocking)
-*Describe how you reduced the comparison space to a manageable candidate set.*
+
+_Describe how you reduced the comparison space to a manageable candidate set._
 
 - **Blocking keys used:** [e.g., PIN code, phonetic name encoding, TF-IDF, etc.]
 - **Candidate pairs generated:** [total]
@@ -36,6 +40,7 @@
 ## 4. Matching Model
 
 **Features used:**
+
 - Name features: [e.g., Jaccard, Levenshtein, phonetic encoding]
 - Address features: [e.g., token overlap, edit distance, PIN code matching]
 - Other: []
@@ -54,20 +59,23 @@
 ---
 
 ## 6. Conclusion
-*Summarize your approach, key achievements, and lessons learned in 2-3 sentences.*
+
+_Summarize your approach, key achievements, and lessons learned in 2-3 sentences._
 
 ---
 
 ## Appendix
 
 ### A. Code Artefacts
-*Your complete, runnable code ships in the submission zip under
+
+_Your complete, runnable code ships in the submission zip under
 `code/business_entity_resolution/` (all source in `src/`, with a `README.md` and
 `requirements.txt`). Summarise its structure and the entry point(s) to reproduce
-`output/matching_results.tsv` and `output/candidate_pairs.tsv` here.*
+`output/matching_results.tsv` and `output/candidate_pairs.tsv` here._
 
 ### B. Additional Results
-*Include any additional charts, graphs, or detailed results.*
+
+_Include any additional charts, graphs, or detailed results._
 
 ---
 
